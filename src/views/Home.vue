@@ -27,7 +27,6 @@
           </tr>
         </tbody>
       </table>
-      <Cart>{{AddCart}}</Cart>
     </div>
   </div>
 </template>
