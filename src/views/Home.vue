@@ -34,11 +34,12 @@
 <script>
 import Vue from 'vue'
 import books from '../books.json'
+
 export default {
   name: 'Home',
   data () {
     return {
-      valuebook: books.books, AddCart : []
+      valuebook : books.books, AddCart : []
     }
   },
   methods: {
