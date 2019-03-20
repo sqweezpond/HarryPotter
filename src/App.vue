@@ -1,4 +1,3 @@
-
 <template>
   <div id="app">
      <link rel="stylesheet" 
@@ -8,9 +7,13 @@
 
       <nav class="navbar sticky-top bg-nav">
         <div class="container">
-            <router-link to="/"><img src="./assets/hp.jpg" class="img-nav" alt=""/></router-link>
-            <router-link to="/Cart" :AddCart="AddCart">
-              <button type="button" prop-name="AddCart" class="btn btn-cart btn-outline-light"><i class="fas fa-shopping-cart icon-size"></i></button>
+            <router-link :to="{ name: 'home', params: { msg } }">
+              <img src="./assets/hp.jpg" class="img-nav" />
+            </router-link>
+            <router-link :to="{ name: 'Cart', params: { msg } }">
+              <button type="button" prop-name="AddCart" class="btn btn-cart btn-outline-light">
+                <i class="fas fa-shopping-cart icon-size"></i>
+              </button>
             </router-link>
         </div>
       </nav>
@@ -18,3 +21,14 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'App',
+    data () {
+      return {
+        msg: ['1','2','3','4']
+      }
+    }
+  }
+</script>

@@ -11,12 +11,14 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      props: true
     },
     {
       path: '/Cart',
       name: 'Cart',
-      component: () => import(/* webpackChunkName: "about" */ './views/Cart.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/Cart.vue'),
+      props: true
     }
   ]
 })

@@ -3,7 +3,7 @@
   <div class="mt-5">
     <div class="container">
       <div class="row">
-        Add Cart : {{AddCart}}
+        Add Cart : {{msg}}
       </div>
       <div class="row">
 
@@ -49,7 +49,18 @@
 </template>
 
 <script>
-  export default{
-    name: 'Cart',
+  export default {
+    name: 'Profile',
+    props: ['msg'],
+    data() {
+        return {
+          welcome: 'This is your profile'
+        }
+    },
+    mounted () {
+      if (this.msg) {
+        this.welcome = this.msg    
+      }
+    }
   }
 </script>

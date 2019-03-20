@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5">
     <div class="container">
-    <div>{{AddCart}}</div>
+    <div>{{ msg }}</div>
       <table class="table table-hover table-responsive-md">
         <thead>
           <tr>
@@ -38,13 +38,20 @@ export default {
   name: 'Home',
   data () {
     return {
-      valuebook: books.books, AddCart : []
+      valuebook: books.books,
+      welcome: 'This is your profile'
     }
   },
   methods: {
     pushBooks: function (e) {
-      console.log(e.target.value)
-      this.AddCart.push(e.target.value)
+      //console.log(e.target.value)
+      this.msg.push(e.target.value)
+    }
+  },
+  props: ['msg'],
+  mounted () {
+    if (this.msg) {
+      this.welcome = this.msg    
     }
   }
 }
