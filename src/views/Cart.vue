@@ -1,0 +1,55 @@
+
+<template>
+  <div class="mt-5">
+    <div class="container">
+      <div class="row">
+        Add Cart : {{AddCart}}
+      </div>
+      <div class="row">
+
+          <ul class="col-lg-8">
+            <li class="list-group-item" v-for="list in 5" :key="list">
+                <div class="row">
+                    <div class="col-md-2 text-center"><img src="../assets/hp.jpg" class="img-book" alt=""/></div>
+                    <div class="col-md-3 text-center mt-2">Harry Potter 2</div>
+                    <div class="col-md-2 text-center mt-2">฿200</div>
+                    <div class="col-md-3 text-center mt-3 mt-md-0">
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-outline-dark">-</button>
+                        <input type="email" class="form-qty" id="" value="1">
+                        <button type="button" class="btn btn-outline-dark">+</button>
+                      </div>
+                    </div>
+                    <div class="col-md-2 text-center mt-3 mt-md-0">
+                      <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt icon-size"></i></button>
+                    </div>
+                </div>
+            </li>
+          </ul>
+
+        <ul class="col-lg-4 mt-4 mt-lg-0 text-right">
+          <li class="list-group-item pb-4">
+            <div class="row">
+              <div class="col-md-4 col-6 mt-2">Price</div>
+              <div class="col-md-6 col-6 text-right total-border mt-2">฿200</div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-6 mt-2">Discount</div>
+              <div class="col-md-6 col-6 text-right total-border mt-2">฿180</div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-6 mt-2">Total</div>
+              <div class="col-md-6 col-6 text-right total-border mt-2">฿180</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default{
+    name: 'Cart',
+  }
+</script>

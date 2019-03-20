@@ -1,0 +1,38 @@
+
+
+.btn-cart{
+    font-size: 32px !important;
+    transition: ease-in-out 0.3s !important;
+    border: transparent !important;
+}
+.btn-cart:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+.btn-outline-light.focus, .btn-outline-light:focus {
+    -webkit-box-shadow: none !important; 
+    box-shadow: none !important; 
+}
+.bg-nav {
+    background-color: #000000!important;
+}
+.img-nav{
+    width: 60px;
+    height: auto;
+    transition: ease-in-out 0.3s;
+}
+.img-book{
+    width: 40px;
+    height: auto;
+}
+.img-nav:hover{
+    transform: scale(1.2);
+    transition: ease-in-out 0.3s;
+}
+.total-border{
+    border-bottom: 1px solid #ccc;
+}
+.form-qty{
+    width: 100%;
+    text-align: center;
+}
