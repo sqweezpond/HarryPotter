@@ -1,32 +1,33 @@
-
 <template>
   <div class="mt-5">
     <div class="container">
 
-      <div class="row mx-0">
-        Add Cart : {{msg}}
+      <div class="row">
+        Add Cart : {{ cart }}
       </div>
 
       <div class="row mt-4">
-          <ul class="col-lg-8">
-            <li class="list-group-item" v-for="cart in 5" :key="cart">
-                <div class="row">
-                    <div class="col-md-2 text-center"><img src="../assets/hp.jpg" class="img-book" alt=""/></div>
-                    <div class="col-md-3 text-center mt-2">Harry Potter 2</div>
-                    <div class="col-md-2 text-center mt-2">฿200</div>
-                    <div class="col-md-3 text-center mt-3 mt-md-0">
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-dark">-</button>
-                        <input type="email" class="form-control form-qty" id="" value="1">
-                        <button type="button" class="btn btn-outline-dark">+</button>
-                      </div>
-                    </div>
-                    <div class="col-md-2 text-center mt-3 mt-md-0">
-                      <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
-                    </div>
+        <ul class="col-lg-8">
+          <li class="list-group-item" v-for="book in incart" :key="incart">
+            <div class="row">
+              <div class="col-md-2 text-center"><img v-bind:src="book.cover" class="img-book" alt="" /></div>
+              <div class="col-md-3 text-center">{{book.title}}</div>
+              <div class="col-md-2 text-center">{{book.price}}</div>
+              <div class="col-md-3 text-center">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-outline-dark">-</button>
+                  <input type="text" class="form-qty" id="" v-bind:value="book.count">
+                  <button type="button" class="btn btn-outline-dark">+</button>
                 </div>
-            </li>
-          </ul>
+              </div>
+              <div class="col-md-2 text-center">
+                <button type="button" class="btn btn-outline-danger">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
 
         <ul class="col-lg-4 mt-4 mt-lg-0 text-right">
           <li class="list-group-item pb-4">
@@ -52,16 +53,13 @@
 <script>
   export default {
     name: 'Cart',
-    props: ['msg'],
+    props: ['cart'],
     data() {
-        return {
-          welcome: 'This is your profile'
-        }
-    },
-    mounted () {
-      if (this.msg) {
-        this.welcome = this.msg    
+      return {
+        incart: this.cart
       }
-    }
+    },
+    mounted() {}
   }
+
 </script>

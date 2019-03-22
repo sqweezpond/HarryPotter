@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5">
     <div class="container">
-    <div>{{ msg }}</div>
+    <div>{{ this.cart }}</div>
       <table class="table table-hover table-responsive-md">
         <thead>
           <tr>
@@ -12,20 +12,18 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(home,key) in valuebook" v-bind:key="key">
+          <tr v-for="(book,key) in allbook" >
             <th scope="row">{{(key+1)}}</th>
             <td>
               <div class="row">
                 <div class="col-md-2">
-                  <img v-bind:src="home.cover" class="img-book" alt=""/>
+                  <img v-bind:src="book.cover" class="img-book" alt=""/>
                 </div>
-                <div class="col-md-4">{{home.title}}</div>
+                <div class="col-md-4">{{book.title}}</div>
               </div>
             </td>
-            <td>{{home.price}}฿</td>
-            <td class="text-center">
-              <button @click="pushBooks" :value="home.id" class="btn btn-outline-dark">Add <i class="fas fa-plus-circle ml-2"></i></button>
-            </td>
+            <td>{{book.price}}</td>
+            <td class="text-center"><button @click="addtocart" :value="book.id" class="btn btn-outline-dark">Add <i class="fas fa-plus-circle ml-2"></i></button></td>
           </tr>
         </tbody>
       </table>
@@ -41,19 +39,30 @@ export default {
   name: 'Home',
   data () {
     return {
-      valuebook: books.books,
-      welcome: 'This is your profile'
+      allbook: books.books,
+      incart : this.cart
     }
   },
   methods: {
-    pushBooks: function (e) {
-      this.msg.push(e.target.value)
+    addtocart: function (e) {
+      // console.log(e.target.value)
+      this.allbook.forEach(element => {
+        if(element.id==e.target.value){
+          if(typeof element.count == 'undefined'){
+            element.count=1;
+          }else{
+            element.count = (element.count) + 1;
+          }
+          this.cart[e.target.value]=element;
+        }
+      });
+      console.log(this.cart)
     }
   },
-  props: ['msg'],
+  props: ['cart'],
   mounted () {
-    if (this.msg) {
-      this.welcome = this.msg    
+    if (this.cart) {
+      this.incart = this.cart
     }
   }
 }
