@@ -1,32 +1,33 @@
-
 <template>
   <div class="mt-5">
     <div class="container">
 
       <div class="row">
-        Add Cart : {{ cart.length }}
+        Add Cart : {{ cart }}
       </div>
 
-      <div class="row">
-          <ul class="col-lg-8">
-            <li  class="list-group-item" v-for="book in incart" :key="incart">
-                <div class="row">
-                    <div class="col-md-2 text-center"><img src="../assets/hp.jpg" class="img-book" alt=""/></div>
-                    <div class="col-md-3 text-center mt-2">{{book.name}}</div>
-                    <div class="col-md-2 text-center mt-2">{{book}}</div>
-                    <div class="col-md-3 text-center mt-3 mt-md-0">
-                      <div class="btn-group" role="group">
-                        <button type="button" class="btn btn-outline-dark">-</button>
-                        <input type="email" class="form-qty" id="" value="1">
-                        <button type="button" class="btn btn-outline-dark">+</button>
-                      </div>
-                    </div>
-                    <div class="col-md-2 text-center mt-3 mt-md-0">
-                      <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt icon-size"></i></button>
-                    </div>
+      <div class="row mt-4">
+        <ul class="col-lg-8">
+          <li class="list-group-item" v-for="book in incart" :key="incart">
+            <div class="row">
+              <div class="col-md-2 text-center"><img v-bind:src="book.cover" class="img-book" alt="" /></div>
+              <div class="col-md-3 text-center mt-2">{{book.title}}</div>
+              <div class="col-md-2 text-center mt-2">{{book.price}}</div>
+              <div class="col-md-3 text-center mt-3 mt-md-0">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-outline-dark">-</button>
+                  <input type="text" class="form-qty" id="" v-bind:value="book.count">
+                  <button type="button" class="btn btn-outline-dark">+</button>
                 </div>
-            </li>
-          </ul>
+              </div>
+              <!-- <div class="col-md-2 text-center mt-3 mt-md-0">
+                <button type="button" class="btn btn-outline-danger">
+                  <i class="fas fa-trash-alt"></i>
+                </button>
+              </div> -->
+            </div>
+          </li>
+        </ul>
 
         <ul class="col-lg-4 mt-4 mt-lg-0 text-right">
           <li class="list-group-item pb-4">
@@ -54,11 +55,11 @@
     name: 'Cart',
     props: ['cart'],
     data() {
-        return {
-          incart: this.cart
-        }
+      return {
+        incart: this.cart
+      }
     },
-    mounted () {
-    }
+    mounted() {}
   }
+
 </script>

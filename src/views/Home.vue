@@ -8,7 +8,7 @@
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
-            <th scope="col" class="text-center">Add</th>
+            <th scope="col" class="text-center">Add to cart</th>
           </tr>
         </thead>
         <tbody>
@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     addtocart: function (e) {
-      console.log(e.target.value)
+      // console.log(e.target.value)
       this.allbook.forEach(element => {
         if(element.id==e.target.value){
           if(typeof element.count == 'undefined'){
