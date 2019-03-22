@@ -33,6 +33,26 @@
     border-bottom: 1px solid #ccc;
 }
 .form-qty{
-    width: 100%;
+    width: auto;
     text-align: center;
+}
+.cart-size{
+    font-size: 25px;
+    color: white;
+    transition: ease-in-out 0.3s;
+}
+.cart-size:hover{
+    color: #fff;
+    transform: scale(1.2);
+    transition: ease-in-out 0.3s;
+    text-decoration: none !important;
+}
+.cart-num {
+    border-radius: 100%;
+    background: #fff;
+    color: #000000;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    font-size: 16px;
 }

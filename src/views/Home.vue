@@ -8,7 +8,7 @@
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Price</th>
-            <th scope="col" class="text-center">Add</th>
+            <th scope="col" class="text-center">Add to cart</th>
           </tr>
         </thead>
         <tbody>
@@ -22,8 +22,10 @@
                 <div class="col-md-4">{{home.title}}</div>
               </div>
             </td>
-            <td>{{home.price}}</td>
-            <td class="text-center"><button @click="pushBooks" :value="home.id" class="btn btn-outline-dark">Add to Cart</button></td>
+            <td>{{home.price}}฿</td>
+            <td class="text-center">
+              <button @click="pushBooks" :value="home.id" class="btn btn-outline-dark">Add <i class="fas fa-plus-circle ml-1"></i></button>
+            </td>
           </tr>
         </tbody>
       </table>

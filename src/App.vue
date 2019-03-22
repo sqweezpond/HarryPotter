@@ -10,10 +10,11 @@
             <router-link :to="{ name: 'Home', params: { msg } }">
               <img src="./assets/hp.jpg" class="img-nav" />
             </router-link>
-            <router-link :to="{ name: 'Cart', params: { msg } }">
-              <button type="button" prop-name="AddCart" class="btn btn-cart btn-outline-light">
-                <i class="fas fa-shopping-cart icon-size"></i>
-              </button>
+            <router-link :to="{ name: 'Cart', params: { msg } }" class="cart-size">
+              <div class="form-inline">
+                <i class="fas fa-shopping-cart"></i>
+                <div id="" class="ml-2 cart-num">1</div>
+              </div>
             </router-link>
         </div>
       </nav>

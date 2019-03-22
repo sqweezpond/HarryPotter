@@ -3,11 +3,11 @@
   <div class="mt-5">
     <div class="container">
 
-      <div class="row">
+      <div class="row mx-0">
         Add Cart : {{msg}}
       </div>
 
-      <div class="row">
+      <div class="row mt-4">
           <ul class="col-lg-8">
             <li class="list-group-item" v-for="cart in 5" :key="cart">
                 <div class="row">
@@ -22,7 +22,7 @@
                       </div>
                     </div>
                     <div class="col-md-2 text-center mt-3 mt-md-0">
-                      <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt icon-size"></i></button>
+                      <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i></button>
                     </div>
                 </div>
             </li>
