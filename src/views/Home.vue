@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5">
     <div class="container">
-    <div>{{ this.cart }}</div>
+    <div>{{ cart }}</div>
       <table class="table table-hover table-responsive-md">
         <thead>
           <tr>

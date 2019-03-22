@@ -10,10 +10,10 @@
         <ul class="col-lg-8">
           <li class="list-group-item" v-for="book in incart" :key="incart">
             <div class="row">
-              <div class="col-md-2 text-center"><img v-bind:src="book.cover" class="img-book" alt="" /></div>
-              <div class="col-md-3 text-center">{{book.title}}</div>
-              <div class="col-md-2 text-center">{{book.price}}</div>
-              <div class="col-md-3 text-center">
+              <div class="col-md-2"><img v-bind:src="book.cover" class="img-book" alt="" /></div>
+              <div class="col-md-3">{{book.title}}</div>
+              <div class="col-md-2">{{book.price}}</div>
+              <div class="col-md-3">
                 <div class="btn-group" role="group">
                   <button type="button" class="btn btn-outline-dark">-</button>
                   <input type="text" class="form-qty" id="" v-bind:value="book.count">
