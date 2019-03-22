@@ -23,7 +23,7 @@
               </div>
             </td>
             <td>{{book.price}}</td>
-            <td class="text-center"><button @click="addtocart" :value="book.id" class="btn btn-outline-dark">Add to Cart</button></td>
+            <td class="text-center"><button @click="addtocart" :value="book.id" class="btn btn-outline-dark">Add <i class="fas fa-plus-circle ml-2"></i></button></td>
           </tr>
         </tbody>
       </table>
