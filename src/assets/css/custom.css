@@ -33,7 +33,7 @@
     border-bottom: 1px solid #ccc;
 }
 .form-qty{
-    width: 100%;
+    border-radius: 0px !important;
     text-align: center;
 }
 .cart-size{

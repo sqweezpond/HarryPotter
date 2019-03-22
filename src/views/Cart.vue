@@ -17,7 +17,7 @@
                     <div class="col-md-3 text-center mt-3 mt-md-0">
                       <div class="btn-group" role="group">
                         <button type="button" class="btn btn-outline-dark">-</button>
-                        <input type="email" class="form-qty" id="" value="1">
+                        <input type="email" class="form-control form-qty" id="" value="1">
                         <button type="button" class="btn btn-outline-dark">+</button>
                       </div>
                     </div>
