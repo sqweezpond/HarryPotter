@@ -2,13 +2,13 @@
   <div class="mt-5">
     <div class="container">
 
-      <div class="row">
-        Add Cart : {{ cart }}
-      </div>
+      <!-- <div class="row">
+        {{ cart }}
+      </div> -->
 
       <div class="row mt-4">
         <ul class="col-lg-8">
-          <li class="list-group-item" v-for="book in incart" :key="incart">
+          <li class="list-group-item" v-for="(book,key) in incart">
             <div class="row">
               <div class="col-md-2"><img v-bind:src="book.cover" class="img-book" alt="" /></div>
               <div class="col-md-3">{{book.title}}</div>

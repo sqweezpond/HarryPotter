@@ -1,7 +1,7 @@
 <template>
   <div class="mt-5">
     <div class="container">
-    <div>{{ cart }}</div>
+    <!-- <div>{{ cart }}</div> -->
       <table class="table table-hover table-responsive-md">
         <thead>
           <tr>
@@ -40,13 +40,15 @@ export default {
   data () {
     return {
       allbook: books.books,
-      incart : this.cart
+      incart: this.cart
     }
   },
   methods: {
     addtocart: function (e) {
       // console.log(e.target.value)
+      this.cartcount = 0
       this.allbook.forEach(element => {
+        this.cartcount = this.cartcount + element.count;
         if(element.id==e.target.value){
           if(typeof element.count == 'undefined'){
             element.count=1;
@@ -59,7 +61,7 @@ export default {
       console.log(this.cart)
     }
   },
-  props: ['cart'],
+  props: ['cart','cartcount'],
   mounted () {
     if (this.cart) {
       this.incart = this.cart

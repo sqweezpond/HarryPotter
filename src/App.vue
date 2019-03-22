@@ -13,13 +13,14 @@
             <router-link :to="{ name: 'Cart'}" class="cart-size">
               <div class="form-inline">
                 <i class="fas fa-shopping-cart"></i>
-                <div id="" class="ml-2 cart-num">1</div>
+                <div id="" class="ml-2 cart-num">{{cartcount}}</div>
               </div>
             </router-link>
         </div>
       </nav>
 
-    <router-view :cart="cart" />
+    <router-view :cart="cart" :cartcount="cartcount" />
+    <!-- <router-view :param="{cart,cartcount}" /> -->
   </div>
 </template>
 
@@ -28,7 +29,8 @@
     name: 'App',
     data () {
       return {
-        cart: {}
+        cart: {},
+        cartcount:0
       }
     }
   }
