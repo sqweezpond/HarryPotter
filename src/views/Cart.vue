@@ -4,16 +4,16 @@
     <div class="container">
 
       <div class="row">
-        Add Cart : {{msg}}
+        Add Cart : {{ cart.length }}
       </div>
 
       <div class="row">
           <ul class="col-lg-8">
-            <li class="list-group-item" v-for="cart in 5" :key="cart">
+            <li  class="list-group-item" v-for="book in incart" :key="incart">
                 <div class="row">
                     <div class="col-md-2 text-center"><img src="../assets/hp.jpg" class="img-book" alt=""/></div>
-                    <div class="col-md-3 text-center mt-2">Harry Potter 2</div>
-                    <div class="col-md-2 text-center mt-2">฿200</div>
+                    <div class="col-md-3 text-center mt-2">{{book.name}}</div>
+                    <div class="col-md-2 text-center mt-2">{{book}}</div>
                     <div class="col-md-3 text-center mt-3 mt-md-0">
                       <div class="btn-group" role="group">
                         <button type="button" class="btn btn-outline-dark">-</button>
@@ -52,16 +52,13 @@
 <script>
   export default {
     name: 'Cart',
-    props: ['msg'],
+    props: ['cart'],
     data() {
         return {
-          welcome: 'This is your profile'
+          incart: this.cart
         }
     },
     mounted () {
-      if (this.msg) {
-        this.welcome = this.msg    
-      }
     }
   }
 </script>

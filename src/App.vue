@@ -7,10 +7,10 @@
 
       <nav class="navbar sticky-top bg-nav">
         <div class="container">
-            <router-link :to="{ name: 'Home', params: { msg } }">
+            <router-link :to="{ name: 'Home' }">
               <img src="./assets/hp.jpg" class="img-nav" />
             </router-link>
-            <router-link :to="{ name: 'Cart', params: { msg } }">
+            <router-link :to="{ name: 'Cart' }">
               <button type="button" prop-name="AddCart" class="btn btn-cart btn-outline-light">
                 <i class="fas fa-shopping-cart icon-size"></i>
               </button>
@@ -18,7 +18,7 @@
         </div>
       </nav>
 
-    <router-view/>
+    <router-view :cart="cart" />
   </div>
 </template>
 
@@ -27,7 +27,7 @@
     name: 'App',
     data () {
       return {
-        msg: ['1','2','3','4']
+        cart: {}
       }
     }
   }
