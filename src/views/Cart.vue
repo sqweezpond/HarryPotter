@@ -11,20 +11,20 @@
           <li class="list-group-item" v-for="book in incart" :key="incart">
             <div class="row">
               <div class="col-md-2 text-center"><img v-bind:src="book.cover" class="img-book" alt="" /></div>
-              <div class="col-md-3 text-center mt-2">{{book.title}}</div>
-              <div class="col-md-2 text-center mt-2">{{book.price}}</div>
-              <div class="col-md-3 text-center mt-3 mt-md-0">
+              <div class="col-md-3 text-center">{{book.title}}</div>
+              <div class="col-md-2 text-center">{{book.price}}</div>
+              <div class="col-md-3 text-center">
                 <div class="btn-group" role="group">
                   <button type="button" class="btn btn-outline-dark">-</button>
                   <input type="text" class="form-qty" id="" v-bind:value="book.count">
                   <button type="button" class="btn btn-outline-dark">+</button>
                 </div>
               </div>
-              <!-- <div class="col-md-2 text-center mt-3 mt-md-0">
+              <div class="col-md-2 text-center">
                 <button type="button" class="btn btn-outline-danger">
                   <i class="fas fa-trash-alt"></i>
                 </button>
-              </div> -->
+              </div>
             </div>
           </li>
         </ul>
