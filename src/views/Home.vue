@@ -37,26 +37,33 @@ export default {
   data () {
     return {
       allbook: books.books,
-      incart : this.cart
+      incart: this.cart
     }
   },
   methods: {
     addtocart: function (e) {
-      // console.log(e.target.value)
       this.allbook.forEach(element => {
+        // cc = (cc + element.count)
         if(element.id==e.target.value){
           if(typeof element.count == 'undefined'){
-            element.count=1;
+            element.count=1
           }else{
-            element.count = (element.count) + 1;
+            element.count = (element.count) + 1
           }
-          this.cart[e.target.value]=element;
+          this.cart[e.target.value]=element
         }
-      });
-      console.log(this.cart)
-    }
+      })
+
+      var cc = parseInt(this.cartcount)
+      var obj = this.cart
+      for (var key in obj) {
+        cc = (cc + parseInt(obj[key].count))
+      }
+      console.log(cc)
+      // this.cartcount = cc
+    },
   },
-  props: ['cart'],
+  props: ['cart','cartcount'],
   mounted () {
     if (this.cart) {
       this.incart = this.cart

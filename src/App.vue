@@ -19,7 +19,8 @@
     components:{Navbar},
     data () {
       return {
-        cart: {}
+        cart: {},
+        cartcount:0
       }
     }
   }

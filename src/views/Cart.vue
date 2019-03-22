@@ -3,7 +3,7 @@
 
       <div class="row">
         <table class="table table-light table-responsive-md">
-          <tbody v-for="book in incart" :key="book" class="text-center">
+          <tbody v-for="book in this.cart" class="text-center">
               <td><img v-bind:src="book.cover" class="img-book" alt="" /></td>
               <td class="pt-4">{{book.title}}</td>
               <td class="pt-4">{{book.price}}฿</td>
