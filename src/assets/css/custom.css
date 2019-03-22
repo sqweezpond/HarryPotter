@@ -31,6 +31,7 @@
 }
 .total-border{
     border-bottom: 1px solid #ccc;
+    text-align: center;
 }
 .form-qty{
     border-radius: 0px !important;
