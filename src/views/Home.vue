@@ -24,7 +24,7 @@
             </td>
             <td>{{home.price}}฿</td>
             <td class="text-center">
-              <button @click="pushBooks" :value="home.id" class="btn btn-outline-dark">Add <i class="fas fa-plus-circle ml-1"></i></button>
+              <button @click="pushBooks" :value="home.id" class="btn btn-outline-dark">Add <i class="fas fa-plus-circle ml-2"></i></button>
             </td>
           </tr>
         </tbody>
