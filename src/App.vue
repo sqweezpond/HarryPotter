@@ -19,7 +19,7 @@
         </div>
       </nav>
 
-    <router-view :cart="cart" :cartcount="cartcount" />
+    <router-view :cartcount="cartcount" :cart="cart"  />
     <!-- <router-view :param="{cart,cartcount}" /> -->
   </div>
 </template>
