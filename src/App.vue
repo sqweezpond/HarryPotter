@@ -4,28 +4,19 @@
         href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
         integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" 
         crossorigin="anonymous">
-
-      <nav class="navbar sticky-top bg-nav">
-        <div class="container">
-            <router-link :to="{ name: 'Home' }">
-              <img src="./assets/hp.jpg" class="img-nav" />
-            </router-link>
-            <router-link :to="{ name: 'Cart'}" class="cart-size">
-              <div class="form-inline">
-                <i class="fas fa-shopping-cart"></i>
-                <div id="" class="ml-2 cart-num">1</div>
-              </div>
-            </router-link>
-        </div>
-      </nav>
-
-    <router-view :cart="cart" />
+        <Navbar></Navbar>
+        <router-view :cart="cart" />
   </div>
 </template>
 
 <script>
+
+  // Vue.component('Navbar', './component/Nav.vue')
+  import Navbar from './component/Nav.vue' 
+
   export default {
     name: 'App',
+    components:{Navbar},
     data () {
       return {
         cart: {}
