@@ -16,7 +16,7 @@
               <div class="col-md-3 text-center">
                 <div class="btn-group" role="group">
                   <button type="button" class="btn btn-outline-dark">-</button>
-                  <input type="text" class="form-qty" id="" v-bind:value="book.count">
+                  <input type="text" class="form-qty form-control" id="" v-bind:value="book.count">
                   <button type="button" class="btn btn-outline-dark">+</button>
                 </div>
               </div>
