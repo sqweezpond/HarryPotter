@@ -2,13 +2,14 @@
 <template>
   <div class="mt-5">
     <div class="container">
+
       <div class="row">
         Add Cart : {{msg}}
       </div>
-      <div class="row">
 
+      <div class="row">
           <ul class="col-lg-8">
-            <li class="list-group-item" v-for="list in 5" :key="list">
+            <li class="list-group-item" v-for="cart in 5" :key="cart">
                 <div class="row">
                     <div class="col-md-2 text-center"><img src="../assets/hp.jpg" class="img-book" alt=""/></div>
                     <div class="col-md-3 text-center mt-2">Harry Potter 2</div>
@@ -50,7 +51,7 @@
 
 <script>
   export default {
-    name: 'Profile',
+    name: 'Cart',
     props: ['msg'],
     data() {
         return {

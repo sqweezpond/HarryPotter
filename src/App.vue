@@ -7,7 +7,7 @@
 
       <nav class="navbar sticky-top bg-nav">
         <div class="container">
-            <router-link :to="{ name: 'home', params: { msg } }">
+            <router-link :to="{ name: 'Home', params: { msg } }">
               <img src="./assets/hp.jpg" class="img-nav" />
             </router-link>
             <router-link :to="{ name: 'Cart', params: { msg } }">
